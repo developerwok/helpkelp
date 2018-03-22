@@ -1,0 +1,46 @@
+# PROJECT STRUCTURE
+--------------------------------------------
+├── climatecents
+│   ├── config.rb
+│   ├── Gemfile
+│   ├── Gemfile.lock
+│   └── source
+│       ├── _footer.erb               <-- footer
+│       ├── _header.erb               <-- header
+│       ├── images
+│       ├── index.html.erb            <-- page :: home 
+│       ├── javascripts
+│       │   └── site.js
+│       ├── layouts
+│       │   └── layout.erb            <-- page layout, wraps all pages
+│       ├── leaderboard.html.erb      <-- page :: leaderboard
+│       ├── stylesheets
+│       │   └── site.css.scss
+│       └── teammembers.html.erb      <-- page :: teammembers
+
+
+Add Scripts to layout.erb
+-------------------------
+
+
+Style Sheet
+-------------
+site.css.scss
+
+
+JS
+-------------
+site.js
+
+
+
+ERB
+--------------
+
+how to make a link 
+
+<%= link_to(
+  "Read Documentation",
+  "https://middlemanapp.com/basics/templating_language/",
+  target: "_blank"
+) %>
