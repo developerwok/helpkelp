@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="339px" height="146px" viewBox="0 0 339 146" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>Birds</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0.173628182 0.10024186 60.1881455 0.10024186 60.1881455 22.8359938 0.173628182 22.8359938"></polygon>
+    </defs>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home_Scene-01---Landing" transform="translate(-1053.000000, -281.000000)">
+            <g id="Birds" transform="translate(1053.000000, 281.000000)">
+                <polygon id="Fill-1" fill="#F2F2F2" points="10 76 35.7596964 88.0411573 54.7779757 109.954727 75 127.534705 45.8707086 135 39.8514271 124.885316 30.9441599 94.7835371"></polygon>
+                <polygon id="Fill-2" fill="#E6E6E6" points="88 124.513921 76.2314653 121.847836 46.3865902 135 33 132.512737 44.8174152 121.02099 77.1924114 117 81.5155579 117.969231"></polygon>
+                <polygon id="Fill-3" fill="#EC9F19" points="33 132.351593 39.138022 127 41 134"></polygon>
+                <polygon id="Fill-4" fill="#FFFFFF" points="126 87 75.4183503 88.7733134 44.7012382 120.752383 44 128.557653 46.3402301 135 73.3462081 129.362175 86.4348795 100.166137"></polygon>
+                <polygon id="Fill-5" fill="#F2F2F2" points="0 0.616115068 10.8064372 12.908253 21.0854153 32 34 32 13.1785957 7.67714006 1.00538088 0"></polygon>
+                <polygon id="Fill-6" fill="#F2F2F2" points="79 9.29033932 57.6782358 9 23.4166208 26.2789956 25.475346 29.3281022 21 31 33.6320606 31 58.4132981 15.6788918"></polygon>
+                <polygon id="Fill-7" fill="#EC9F19" points="23 27 23.1578636 32 26 29.3529736"></polygon>
+                <polygon id="Fill-8" fill="#F2F2F2" points="189 113 195.84846 121.627356 206 146 198.810238 144.365072 193.161803 122.135539"></polygon>
+                <polygon id="Fill-9" fill="#FFFFFF" points="233 120 222.4633 120.731037 203.292033 136.666853 203 141.783551 207.097419 145 222.902469 124.970826"></polygon>
+                <polygon id="Fill-10" fill="#F1B955" points="200 141.142545 202.187575 146 205 140"></polygon>
+                <polygon id="Fill-11" fill="#FFFFFF" points="261 81 273.294128 89.0314995 294 112 280.24977 111.839534 270.382477 91.9220726"></polygon>
+                <g id="Group-17" transform="translate(278.000000, 89.000000)">
+                    <g id="Group-14" transform="translate(0.554545, 0.000000)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <g id="Clip-13"></g>
+                        <path d="M60.1882009,0.591404651 L40.1835282,0.10024186 L0.173628182,19.2528 L1.80011,22.6903814 C1.80011,22.6903814 14.4864464,23.0180093 14.9744464,22.6903814 C15.4624464,22.3627535 41.1595282,6.4848 41.1595282,6.4848 L60.1882009,0.591404651 Z" id="Fill-12" fill="#FFFFFF" mask="url(#mask-2)"></path>
+                    </g>
+                    <polygon id="Fill-15" fill="#F1B955" points="5.60767455 19.0890419 0.402710909 23.3448558 8.86008364 23.8360186"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

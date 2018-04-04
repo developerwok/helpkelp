@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="923px" viewBox="0 0 1440 923" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.2 (51160) - http://www.bohemiancoding.com/sketch -->
+    <title>landing-sky</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50.0001739%" y1="9.52628251%" x2="50.0001739%" y2="94.8990049%" id="linearGradient-1">
+            <stop stop-color="#C3D2F7" offset="0%"></stop>
+            <stop stop-color="#FFCA83" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home_Scene-01---Landing" fill="url(#linearGradient-1)" fill-rule="nonzero">
+            <g id="SCENE-01-Home">
+                <g id="Kelp_SurfaceScene-FPO-Copy">
+                    <g id="landing-sky">
+                        <rect id="Rectangle-path" x="0" y="0" width="1440" height="922.127714"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

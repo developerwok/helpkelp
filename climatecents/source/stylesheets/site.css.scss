@@ -1,23 +1,140 @@
+@charset 'UTF-8';
+
+// Init variables
+@import 'variables';
+
+// Add library
+@import 'library';
+
+// Add Nav bar
+@import 'navbar';
+
+
+/******************
+universal
+******************/
 body {
-	background: orange;
+	background: white;
 	font-family: 'Oxygen', sans-serif;
+	font-size: 100%;
 }
 
+
+/* buttons */
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+
+/* nav bar */
+.navbar-brand {
+	min-height: 114px;
+	
+	.kelped {
+		min-height: 57px;
+	}
+	
+	.challenge {
+		min-height: 40px;
+		margin-left: 10px;
+		margin-top: 6px;
+	}
+}
+nav {
+	.navbar-item {
+		.button {
+	    	line-height: 0;
+		}
+		
+		&:hover {
+			background: transparent !important;
+		}
+	}
+	
+	
+	button.signup {
+		background: transparent !important;
+		/* Button Plate - Outline: */
+		border: 1px solid #1B6067;
+		border-radius: 7px;		
+		
+		font-size: 12px;
+		color: #1B6067;
+		letter-spacing: 0;
+	}
+	
+	button.donate {
+		/* Button Plate - Donate: */
+		background: #A5D900;
+		border-radius: 7px;
+	}
+	
+}
+
+
+
+/* header */
 #header { 
-
-	background: yellow;
-
+    
+    border: 0px solid white;	
+    background-image: url( /images/skyblend.png);
+	background-repeat: repeat;
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+    max-height: 100%;
+    height: 114px;
+  	display: flex;
+  	justify-content: space-between;
+  	
+  	
 	#logo { 
-
-		img { 
-
+		
+	    border: 0px solid black;
+	    max-width: 300px;
+	    margin-left: 27px;
+	    width: 100%;
+	    margin-top: 23px;
+		
+		img.kelped { 
+			width: 110px;
+			height: 57px;
+		}
+		
+		img.challenge { 
+			position: relative;
+    		left: 5px;
+    		top: -4px;		
 		}
 	}
 
 	#menu { 
-
+				
+		
+		border: 0px solid black;
+		
+		display: flex;
+	    justify-content: flex-end;
+		max-width: 99%;
+		width: 75%;
+		
 		ul { 
 
+			
+			border: 1px solid red;
+			display: flex;
+		    justify-content: center;
+		    align-items: center;
+		    
 			#takethechallenge { 
 
 				a { 
@@ -26,532 +143,1057 @@ body {
 			}
 
 			li { 
-
+				display: inline;
+				padding-left: 1em;
+				padding-right: 1.8em;
+			    
 				a { 
-
 				}
 			}
 		}
 	}
 }
 
+
+/* footer */
 #footer { 
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	/* justify-content: space-around; */
+	align-items:left;
+	position: relative;
+	background: #062E4A;
+	border: 0px solid green;
+	color: white;
 	
-	background: yellow;
-
+	padding-top: 100px;
+	padding-bottom: 100px;
+	
+	#wrap {
+		max-width: auto;
+		width: 960px;
+		margin: 0 auto;
+		max-height: auto;
+		height: auto;
+	
+	.leftdiv {
+			border: 0px solid orange;
+			max-width: auto;
+			width: 35%;
+			margin-right: 5%;
+			max-height: auto;
+			height: 100%;
+			float: left;
+		}
+	
+	.rightdiv {
+		position: relative;
+		border: 0px solid orange;
+		max-width: auto;
+		width: 60%;
+		max-height: auto;
+		height: 100%;
+		float: left;
+		}
+	}
+	.container {
+		display: flex-inline;
+		flex-direction: row;
+		position: relative;
+		margin-top: 0px;
+		margin-left: 0px;
+		margin-right: auto;
+		max-width: auto;
+		width: 100%;
+		border: 0px solid red;
+	}
+	
+	.alwayspad15pxontop {
+		padding-top: 15px;
+	}
+	
 	#contactus { 
-
 		ul { 
-
+			padding-bottom: 79px;
+			
 			li { 
-
+				a {
+					color: #8BC53F;
+				}
 			}
 		}
 	}
 
 	#socialmedia { 
-
-		ul { 
-
-			#checkinonusintheseplaces { 
-
+			display: flex-inline;
+			flex-direction: row;
+			position: relative;
+			margin-top: 0px;
+			margin-left: 0px;
+			margin-right: auto;
+			max-width: 250px;
+			width: 100%;
+			max-height: auto;
+			height: 100%;
+			padding-bottom: 15px;
+			border: 0px solid red;
+			
+			span {
+				display: block; 
+				border: 0px solid white; 
+				position: relative;
+				padding-bottom: 35px;
+				color: white; 
 			}
 
-			li { 
 
-				a { 
+			ul {
+			
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				position: relative;
+				border: 0px solid white;
+				max-width: 210px;
+				width: 100%;
+				max-height: 70px;
+				height: 100%;
 
+				li {
+					display: inline-flex;
+					flex-direction: row;
+					position: relative;
+					border: 0px solid black;
+					max-width: 200px;
+					width: 54px;
+					max-height: 54px;
+					height: 54px;
+						
+					img {
+						
+						width: 100%;
+						
+					}
+					
+					
+
+					
+					/*	display: inline; */
+					a {
+						display: flex;
+						flex-direction: column;
+						position: absolute;
+						background: none;
+						text-align: center;
+						width: 50px;
+						height: 50px;
+						font-size: 7px;
+						
+						
+					}
 				}
 			}
 		}
-	}
+
 
 	#donations { 
+			display: flex-inline;
+			flex-direction: column;
+			position: relative;
+			margin-top: 0px;
+			margin-left: 0px;
+			margin-right: auto;
+			max-width: 550px;
+			width: 100%;
+			border: 0px solid red;
+		
 
-		ul { 
+			ul {
+			
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				position: relative;
+				border: 0px solid white;
+				max-width: 550px;
+				width: 100%;
+				max-height: 200px;
+				height: 100%;
+				
+				li {
 
-			li { 
-
+					display: flex;
+					flex-direction: column;
+					position: relative;
+					border: 0px solid black;
+					max-width: 550px;
+					width: 100%;
+					max-height: 43px;
+					height: 100%;
+					padding-bottom: 15px;
+					
+					p {
+						font-size: .8em;
+					}
+			
+					a {
+					
+					color: #8BC53F;
+					
+				}
+			
+			
+				}
 			}
 		}
-	}
 
 	#copyright { 
+		
+		display: flex-inline;
+		flex-direction: column;
+		position: relative;
+		margin-top: 0px;
+		margin-left: 0px;
+		margin-right: auto;
+		max-width: 550px;
+		width: 100%;
+		border: 0px solid red;
 
 		ul { 
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			position: relative;
+			border: 0px solid white;
+			max-width: 550px;
+			width: 100%;
+			max-height: 200px;
+			height: 100%;
 
-			li { 
-
-			}
-		}
-	}
-}
-
-#landing { 
-	
-	#landing_title { 
-
-		#h1landing_title { 
-
-		}
-
-		#h2landing_date { 
-
-		}
-
-		#h2landing_year { 
-
-		}
-	}
-
-	#Help { 
-
-		#help_bring { 
-
-		}
-	}
-
-	#socialmedia { 
-
-		ul { 
-
-			li { 
-
-				a { 
-
-				}
-			}
-		}
-	}
-
-	#btn_takethechallenge { 
-
-		button { 
-
-			ul { 
-
-				#takethechallenge { 
-
-					a { 
-
+			li {
+				
+				display: flex;
+				flex-direction: column;
+				position: relative;
+				border: 0px solid black;
+				max-width: 550px;
+				width: 100%;
+				max-height: 43px;
+				height: 100%;
+				padding-bottom: 0px;
+					
+					p {
+						font-size: .8em;
 					}
-				}
-			}
-		}
-	}
 
-	#learnmore { 
-
-		ul { 
-
-			li { 
-
-				a { 
-
-				}
 			}
 		}
 	}
 }
 
-#aboutthechallenge { 
 
-	background: grey;
+
+
+
+/******************
+scence 01 
+- landing
+******************/
+section#landing {
+
+	/* multiple backgrounds */
+	background-color: purple;
 	
-	#thechallengelogo { 
+	background-image: 
+		url(/images/clouds.svg),
+		url(/images/skyblend.png),
+		url(/images/birds.svg),
+		url(/images/boat.svg),
+		url(/images/boatcastingline.svg),
+		url(/images/wave-1.svg),
+		url(/images/wave-2.svg),
+		url(/images/wave-3.svg),
+		url(/images/wave-4.svg),
+		url(/images/bkg-landing-sky.svg);
+		
+	background-repeat: 
+		repeat-x, 
+		repeat-x,
+		no-repeat,
+		no-repeat,
+		no-repeat,
+		no-repeat,
+		no-repeat,
+		no-repeat,
+		no-repeat;
+	
+	
+	background-position: 
+		top, 
+		top,
+		1053px 432px,
+		bottom,
+		450px 1086px,
+		bottom,
+		bottom,
+		bottom, 
+		bottom, 
+		bottom;
+		
+	background-size: 
+		300px 100px, 
+		100%,
+		340px 146px,
+		100%,
+		3.72px 250.53px, /* casting line does not go to bottom */
+		100%,
+		100%,
+		100%,
+		100%,
+		cover;
+
+	.container {
+		/* Help bring back the: */
+		font-family: Montserrat;
+	
+		display: flex;
+		position: relative;
+		border: 0px solid green;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+	
+		// @do mobile	
+		height: 840;
+		min-height: 840px;
+		width: 100%;
+		
+
+		#landing_title {
+
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			align-items: center;	
+			background-repeat: no-repeat;
+			position: relative;
+			border: 0px solid white;
+			margin-left: auto;
+			margin-right: auto;
+			width: 700px;
+			display: flex;
+			color: #005672;
+			
+			h1 {
+				position: relative;
+				background-image: url(/images/lg-kelpchallenge.svg);
+				background-repeat: no-repeat;
+				background-size: 100%;
+				width: 626px;
+				height: 431px;
+				
+				&::after { 
+				/* 2018: */
+					font-size: 20px;
+					color: #013E63;
+					letter-spacing: 0;
+					text-align: right;
+					line-height: 36px;
+					content: "2018";
+					position: absolute;
+					top: 67%;
+					right: 0;
+				}
+			}
+
+			h2 {
+				font-family: Montserrat;
+				font-size: 16px;
+				color: #013E63;
+				letter-spacing: 3.56px;
+				text-align: center;
+				line-height: 40px;
+				font-weight: regular;
+
+			}
+
+			h3 {
+				display: block;
+				position: absolute;
+				border: 0px solid yellow;
+				margin-top: 100px;
+				max-width: 100%;
+				width: 612px;
+				max-height: 100%;
+				height: 50px;
+				text-align: right;
+
+			}
+			
+			h4 {
+				font-size: 24px;
+				color: #013E63;
+				letter-spacing: -0.5px;
+				text-align: center;
+				line-height: 36px;
+			}
+		}
+		
+		#social-media {
+			display: inline-block;
+			text-align: center;
+		
+			a {
+				display: inline-block;
+			}	
+			
+			img {
+				display: inline-block;
+				width: 24px;
+				height: 24px;
+				margin: 0 12px;
+			}
+		}
+
+		#btn_takethechallenge {
+			button {
+				height: 44px;
+				width: 227px;
+				background: #005672;
+				border-radius: 4px;
+				font-size: 14px;
+				color: #FFFFFF;
+				letter-spacing: 0;
+				text-align: center;
+				line-height: 16px;
+				border: 0;
+			}
+		}
+
+		#learnmore {
+			a {
+				opacity: 0.6;
+				font-family: Montserrat;
+				font-size: 18px;
+				color: #FFFFFF;
+				letter-spacing: 0;
+				text-align: center;
+				line-height: 36px;
+			}
+		} 
+	} 
+	
+}
+
+
+/* underwater container */
+.underwater {
+	background-image: url('/images/bkg-underwater.svg');
+	background-size: cover;
+	
+	.container {
+    width: 920px;
+    margin: 0 auto;
+    text-align: left;
+    // border: 1px solid rgba(0,0,0,.05);
+		
+		h2 { 
+			display: block; 
+			border: 0px solid white; 
+			max-width: 750px; 
+			margin-left: 0px; 
+			text-align: left; 
+			vertical-align: middle; 
+			font-size: 4em; 
+			color: white;
+		}
+	
+		div.callout { 
+			font-family: Montserrat;
+			font-weight: bold;
+			
+			font-size: 21px;
+			color: #FFFFFF;
+			letter-spacing: 0;
+			line-height: 29px;
+			
+			max-width: 560px;
+	    margin-bottom: 30px;
+	    margin-top: 30px;
+		}
+	
+		.content {
+			/* At the turn of the c: */
+			font-family: Montserrat;
+			font-size: 21px;
+			color: #FFFFFF;
+			letter-spacing: 0;
+			line-height: 29px;
+			
+			max-width: 560px;
+	    margin-bottom: 30px;
+	    margin-top: 30px;
+		}
+		
+		p {
+			font-family: Oxygen;
+			
+			font-size: 16px;
+			font-weight: regular;
+			
+			color: #FFFFFF;
+			letter-spacing: 0;
+			line-height: 24px;
+			
+			max-width: 400px;
+			margin-bottom: 1rem;
+		}
+		
+		.text-right {
+			text-align: right;
+		}
+		
+		.text-left{
+			text-align: left;
+		}
+		
+		&.gap {
+			min-height: 400px;
+		}
+		
+		
+		&.right-adjusted {
+			padding-left: 400px;
+		}
+		
+		&.center-adjusted {
+			text-align: center !important;
+			
+			#section-logo {
+				width: 100%; 
+			}
+			
+			h2 {
+		    text-align: center;
+		    width: 100%;
+		    max-width: 100% !important;
+			}
+			
+			.content {
+				margin: 30px auto !important;
+				text-align: center !important;
+			}
+			
+			.cta {
+				padding-left: 0 !important;
+			}
+			
+		}
+	}
+
+	
+	.cta {	
+  	padding-left: 105px;
+  	
+		a.start { 
+			display: inline-block;
+	    background: #A3DC00;
+	    border-radius: 4px;
+	    min-width: 240px;
+	    max-width: 240px;
+	    height: 40px;
+	    
+	    font-family: Montserrat;
+			font-weight: bold;
+	    font-size: 14px;
+	    color: #FFFFFF;
+	    letter-spacing: 0;
+	    text-align: center;
+	    line-height: 40px;
+	    text-decoration: none;
+		}
+	}
+	
+}
+
+
+/* scene 1 */
+section.scene {
+	padding-top: 100px;	
+	height: 940px;
+	position: relative;
+	
+	.container {
+		width: 920px;
+		margin: 0 auto;
+		text-align: left;
+	}
+	
+	#section-logo{ 
+		display: block; 
+		border: 0px solid black; 
+		width: 250px; 
+		margin-left: 0px; 
+		text-align: center; 
 
 		img { 
-
+			display: block; 
+			background-repeat: no-repeat;
+			background-size: 94px 46px;
+			border: 0px solid red;
+			width: 94; height: 46; 
+			text-align: center;
+			vertical-align: middle; 
+			display: inline-block;
 		}
 
 		span { 
-
+			
+			display: block; 
+			border: 0px solid white; 
+			position: relative;
+			padding-top: 15px;
+			color: white; 
 		}
 	}
-
-	h1 { 
-
+	
+	.offset {
+		margin-left: 60px;
 	}
+	
+	.cta-details { 
+		a {
+			font-size: 16px;
+			color: #A3DC00;
+			letter-spacing: 0;
+			line-height: 24px;
 
+			img {
+				display: inline;
+			}
+		}
+	}
+	
+}
+
+
+/* scene 2 -  section - */
+section#about {
+	background-image: 
+		url('/images/diver.png'),
+		url('/images/fish.svg');
+		
+	background-size:
+		455px 454px,
+		247px 130px;
+		
+	background-position:
+		0% 50%,
+		100% 50%;
+		
+	background-repeat:
+		no-repeat,
+		no-repeat;
+}
+
+
+/* scene 3 - get started*/
+section#getstarted{ 
+	.container {
+		width: 920px;
+		margin: 0 auto;
+		text-align: left;
+		position: relative;
+	}
+	
+	background-image: 
+		url('/images/clipboard.svg'),
+		url('/images/bluezebra.png'),
+		url('/images/lg-kelp.png');
+		
+	background-size:
+		455px 454px,
+		247px 130px,
+		1047px 1043px;
+		
+  background-position: 
+  	100% 50%, 
+  	0% 50%, 
+  	-470px 0%;
+		
+	background-repeat:
+		no-repeat,
+		no-repeat;		
+		
+	height: 940px;
+	display: flex;
+	flex-direction: column;
+	align-items:left;
+	position: relative;
+	
 	h2 { 
-
+		position: absolute;
+    left: 200px;
+    max-width: 235px;
+    margin: 0;
+    text-align: right;
+    color: white;
+    font-size: 3.5em;
+    
+		font-family: Montserrat-SemiBold;
+		font-size: 60px;
+		color: #FFFFFF;
+		letter-spacing: -1.25px;
+		text-align: right;
+		line-height: 60px;
 	}
-
-	p { 
-
-	}
-
-	a { 
-
-	}
-}
-
-#getstarted { 
-
-	background: white;
-
+		 
+		 
+	#steps {
 	
-	#gettingstartedis { 
-
-	}
-
-	#signup { 
-
-	}
-
-	p { 
-
-	}
-
-	#setyourgoals { 
-
-	}
-
-	#divein { 
-
-	}
-
-	#btn_GetStarted { 
-
-		button { 
-
-			ul { 
-
-				#GetStarted { 
-
-					a { 
-
-					}
+    position: relative;
+    min-width: 480px;
+    width: 480px;
+    max-height: 500px;
+    height: 100%;
+    margin: 0px;
+    float: right;
+		
+		/* todo - mobile */
+		float: right;
+		
+		
+		.item {
+			position: relative;
+    	padding-left: 105px;
+			
+			&:after {
+		    content: '-';
+		    display: block;
+		    width: 53px;
+		    height: 62px;
+		    line-height: 70px;
+		    background-image: url(/images/step-bubble.svg);
+		    background-position: 0 10px;
+		    background-repeat: no-repeat;
+		    position: absolute;
+		    left: 37px;
+		    top: -32px;
+		    font-family: Oxygen;
+		    font-weight: light;
+		    font-size: 19px;
+		    color: #FFFFFF;
+		    letter-spacing: -0.4px;
+		    text-align: center;
+			}
+	
+	  	&:nth-child(1) {
+				&:after {
+					content: '1';
 				}
+	  	}
+	  	
+	  	&:nth-child(2) {
+				&:after {
+					content: '2';
+				}
+	  	}
+	  	
+	  	&:nth-child(3) {
+				&:after {
+					content: '3';
+				}
+	  	}
+		}
+		
+	
+		h3 {
+			font-family: Montserrat;
+			font-weight: bold;
+			font-size: 34px;
+			color: #FFFFFF;
+			letter-spacing: 0;
+			line-height: 24px;
+		}	
+		
+		
+		p { 
+			font-family: Oxygen;
+			font-size: 16px;
+			color: #FFFFFF;
+			letter-spacing: 0;
+			line-height: 24px;
+			margin: 1rem 0;
+		
+			a {
+				color: #A3DC00;
+				font-weight: bold;
+				text-decoration: none;
 			}
+			
 		}
+	
+	} 
+	
+}
+
+/* scene 4 - facts*/
+section#science {
+	height: 1440px;
+	
+	background-image: 
+		url('/images/seal.png'),
+		url('/images/shark.png'),
+		url('/images/lg-kelp2.png'),
+		url('/images/lg-kelp3.png');
+		
+	background-size:
+		455px 454px,
+		247px 130px,
+		982px 1457px,
+		1252px 1248px;
+		
+	background-position:
+    -260px 50%, 
+    100% 50%, 
+    -420px 50%,
+    640px 420px;
+		
+	background-repeat:
+		no-repeat,
+		no-repeat,
+		no-repeat,
+		no-repeat;
+    
+	.facts {
+		position: relative;
+		margin-bottom: 50px;
+		
+		// @todo mobile adjust
+		padding-left: 620px !important;
+		
+		div {
+			display: block;
+		}
+		
+		.big {
+			/* 1: */
+			font-family: Montserrat;
+			font-size: 120px;
+			color: #FFFFFF;
+			letter-spacing: 0;
+			line-height: 50px;
+			left: -44px;
+			position: relative;
+			top: 20px;
+		}
+		
+		.line1 {
+			/* Restoration Dive: */
+			font-family: Montserrat;
+			font-weight: bold;
+			font-size: 24px;
+			color: #FFFFFF;
+			letter-spacing: 0;
+			line-height: 24px;
+		}
+		.line2 {
+			/* will capture: */
+			font-family: Montserrat-SemiBold;
+			font-size: 18px;
+			color: #FFFFFF;
+			letter-spacing: 0;
+			line-height: 50px;
+		}
+		.line3 {
+			/* 8.5 TONS: */
+			font-family: Montserrat-SemiBold;
+			font-size: 60px;
+			color: #FFFFFF;
+			letter-spacing: 0;
+			line-height: 40px;
+		}
+		.line4 {
+			/* of CO2 over 10yrs: */
+			font-family: Montserrat-SemiBold;
+			font-size: 24px;
+			color: #FFFFFF;
+			letter-spacing: 0;
+			line-height: 40px;	
+		}
+		
 	}
-
-	#link_donatedirectly { 
-
-		a { 
-
+	
+	.float-facts {
+		// @todo mobile adjust
+		font-family: Montserrat;
+		font-weight: bold;
+		padding-left: 50%;
+		
+		div {
+			/* Absorbtion of CO2 an: */
+	    font-size: 16px;
+	    color: #FFFFFF;
+	    letter-spacing: 0;
+	    text-align: center;
+	    font-family: Montserrat;
+			font-weight: bold;
+	    display: block;
+	    position: relative;
+	    padding: 20px;
+	    width: 100%;
 		}
+		
+		.line1 {
+			text-align: left;
+			max-width: 50%;
+		}
+		
+		.line2 {
+			text-align: right;
+		}
+		
+		.line3 {
+			text-align: left;
+		}
+		
+		
 	}
 }
 
-#kelpfacts { 
 
-	background: #f2e6d9;
+/* scene 5 -  history */
+.history-scene-bkg {
+	height: auto;
+	height: auto;
+	padding-bottom: 300px;
+	
+		// url('/images/seafloor-bluefish.png'),
+		// url('/images/seafloor-redfish.png'),
+		// url('/images/seafloor-witin-weeks.png'),
+		// url('/images/seafloor-witin-days.png'),
+		
+	background-image: 
+		url('/images/deepdive.png'),
+		url('/images/seafloor-pup.png'),
+		url('/images/seafloor-bluefish.png'),
+		url('/images/seafloor-redfish.png'),
+		url('/images/seafloor-thrive.png'),
+		url('/images/seafloor-urchin-split.png'),
+		url('/images/seafloor-within-days.png'),
+		url('/images/seafloor-within-weeks.png'),
+		url('/images/seafloor.png');
+	
+    background-size: 162px 268px, 340px 232px, 247px 130px, 260px 163px, 100%, 100%, 100%, 100%, 100%;
+    background-position: 220px 96%, 50% 95%, 100% 90%, 200px 93%, bottom, bottom, bottom, bottom, bottom;
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+		background-attachment: scroll, scroll, scroll, scroll, scroll, scroll, scroll, scroll, scroll;
 
-	#thesciencelogo { 
+}
+section#history{
+	height: auto;
+	padding-bottom: 300px;
+	
+	background-image: 
+		url('/images/surface-light-blend.png'),
+		url('/images/seaotter.png'),
+		url('/images/history-diver.png'),
+		url('/images/history-bubbles.png');
+	
+    background-size: 100%, 360px, 175px, 48px;
+    background-position: 100% 0, 94% 300px, 200px 1450px, 220px 1320px;
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+		background-attachment: scroll, fixed, scroll, scroll;
 
-		img { 
-
-		}
-
-		span { 
-
-		}
-	}
-
-	h1 { 
-
-	}
-
+    
 	h2 { 
-
-	}
-
-	p { 
-
-	}
-
-	a { 
-
-	}
-
-	#1restorationdive { 
-
-		h1 { 
-
-		}
+		max-width: 500px; 
 	}
 }
 
-#thehistory { 
 
-	background: #e6ccb3;
-
-	#thehistorylogo { 
-
-		img { 
-
-		}
-
-		span { 
-
-		}
-	}
-
-	h1 { 
-
-	}
-
-	p { 
-
-	}
-}
-
-#thehistorywherethekelpis { 
+/* thanks */
+section#thanks {
+	padding-top: 300px;
+	padding-bottom: 300px;
+	text-align: center;	
 	
-	background: #d9b38c;
-
-	#thehistorylogo { 
-
-		img { 
-
-		}
-
-		span { 
-
-		}
+	.box {
+		text-align: center;
+		max-width: 920px;
+		margin: 0 auto;
+		line-height: 2rem;
 	}
-
-	p { 
-
-	}
-
-	h1 { 
-
-	}
-}
-
-#thedisruptedfoodchain { 
 	
-	background: #cc9966;
-
-	#thehistorylogo { 
-
-		img { 
-
-		}
-
-		span { 
-
-		}
+	h2 {
+		/* Special thanks to ou: */
+		font-family: Montserrat;
+		font-weight: bold;
+		font-size: 36px;
+		color: #FFFFFF;
+		letter-spacing: -0.75px;
+		text-align: center;
+		line-height: 70px;
 	}
-
-	h1 { 
-
+	
+	.sub-title {
+		/* We do this out of ou: */
+		font-family: Oxygen;
+		font-weight: bold;
+		font-size: 16px;
+		color: #FFFFFF;
+		letter-spacing: 0;
+		text-align: center;
+		line-height: 30px;
 	}
-
-	p { 
-
+	
+	.members {
+		max-width: 960px;
+		margin: 80px auto;
 	}
-}
-
-#therestoration1 { 
-
-	#therestorationlogo { 
-
-		img { 
-
-		}
-
-		span { 
-
-		}
+	
+	.sub-footnote {
+		/* Additional gratitude: */
+		font-family: Montserrat;
+		font-weight: bold;
+		font-size: 24px;
+		color: #FFFFFF;
+		letter-spacing: -0.5px;
+		text-align: center;
 	}
-
-	h1 { 
-
+	
+	h5 {
+		/* Climate Cents: */
+		font-family: Montserrat-SemiBold;
+		font-size: 24px;
+		color: #FFFFFF;
+		letter-spacing: -0.5px;
+		text-align: center;
+		margin: 10px auto;
 	}
-
-	p { 
-
+	
+	h6 {
+		/* Nick, Russell, Fred: */
+		font-family: Oxygen;
+		font-size: 12px;
+		color: #FFFFFF;
+		letter-spacing: -0.37px;
+		text-align: center;
 	}
-
-	a { 
-
-	}
-}
-
-#therestoration2 { 
-
-	#therestorationlogo { 
-
-		img { 
-
-		}
-
-		span { 
-
-		}
-	}
-
-	h1 { 
-
-	}
-
-	p { 
-
-	}
-}
-
-#therestoration3 { 
-
-	span { 
-
-	}
-
-	h1 { 
-
-	}
-
-	p { 
-
-	}
-}
-
-#therestoration4 { 
-
-	span { 
-
-	}
-
-	h1 { 
-
-	}
-
-	p { 
-
-	}
-}
-
-#therestoration5 { 
-
-	span { 
-
-	}
-
-	h1 { 
-
-	}
-
-	p { 
-
-	}
-}
-
-#therestoration6 { 
-
-	#thechallengelogo { 
-
-		img { 
-
-		}
-
-		span { 
-
-		}
-	}
-
-	h1 { 
-
-	}
-
-	p { 
-
-	}
-}
-
-#graciasez { 
-
-	h1 { 
-
-	}
-
-	p { 
-
-	}
-
-	#specialthankslogos { 
-
-		#members1 { 
-
-			img { 
-
-			}
-
-			h5 { 
-
-			}
-
-			h6 { 
-
-			}
-		}
-
-		#members2 { 
-
-			img { 
-
-			}
-
-			h5 { 
-
-			}
-
-			h6 { 
-
-			}
-		}
-
-		#members3 { 
-
-			img { 
-
-			}
-
-			h5 { 
-
-			}
-
-			h6 { 
-
-			}
-		}
-
-		#members4 { 
-
-			img { 
-
-			}
-
-			h5 { 
-
-			}
-
-			h6 { 
-
-			}
-		}
-	}
-
-	#additionalgratitude { 
-
-		#additionalgratitude-no1 { 
-
-			p { 
-
-			}
-		}
-
-		#additionalgratitude-no2 { 
-
-			p { 
-
-			}
-
-			div { 
-
-			}
+	
+	.morethanks {
+		margin-top: 60px;
+		padding: 40px auto;
+		font-family: Oxygen;
+		font-size: 12px;
+		font-weight: 100;
+		color: #FFFFFF;
+		letter-spacing: -0.37px;
+		text-align: left;
+		
+		.row {
+			line-height: 2rem;
 		}
 	}
 }

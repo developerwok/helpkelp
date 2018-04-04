@@ -8,15 +8,18 @@
           
     <!-- reset style sheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/base-min.css">
           
     <!-- Use the title from a page's frontmatter if it has one -->
     <title><%= current_page.data.title || "Middleman" %></title>
     
     <!-- fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
     
-    
+    <!-- cdn js libs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.6.0/rellax.js"></script>
+
     <%= stylesheet_link_tag "site" %>
     <%= javascript_include_tag "site" %>
   </head>

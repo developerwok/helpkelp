@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="940px" viewBox="0 0 1440 940" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.2 (51160) - http://www.bohemiancoding.com/sketch -->
+    <title>BG/Underwater_Surface Blend</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="2.29859104%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#03A8A1" offset="0%"></stop>
+            <stop stop-color="#1A797D" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home_Scene-02---About-the-Challenge" fill="url(#linearGradient-1)">
+            <rect id="BG/Underwater_Surface-Blend" x="0" y="0" width="1440" height="940"></rect>
+        </g>
+    </g>
+</svg>

@@ -5,6 +5,7 @@ activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
 end
 
+# Live reload
 activate :livereload, host: '167.99.109.132', apply_js_live: true, apply_css_live: true
 
 # Layouts
@@ -14,6 +15,14 @@ activate :livereload, host: '167.99.109.132', apply_js_live: true, apply_css_liv
 page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
+
+
+#configure :development do
+#  set :css_dir, 'assets/stylesheets'
+#  set :js_dir, 'assets/javascripts'
+#  set :images_dir, 'assets/images'
+#  set :fonts_dir, 'assets/fonts'
+#end
 
 # With alternative layout
 # page '/path/to/file.html', layout: 'other_layout'

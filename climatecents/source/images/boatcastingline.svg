@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="7px" height="198px" viewBox="0 0 7 198" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="-179.331584%" y1="49.7200528%" x2="220.502257%" y2="50.0269554%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.6">
+        <g id="Home_Scene-01---Landing" transform="translate(-437.000000, -742.000000)" stroke="url(#linearGradient-1)" stroke-width="3">
+            <g id="SCENE-01-Home">
+                <path d="M438,744 L439.104616,744.394863 C440.74204,744.972807 441.803854,746.559425 441.713711,748.293509 L438.994655,994.533009" id="Shape-Copy"></path>
+            </g>
+        </g>
+    </g>
+</svg>

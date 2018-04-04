@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon/Link/Modal</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home_Scene-02---About-the-Challenge" transform="translate(-520.000000, -773.000000)" fill="#A3DC00">
+            <g id="Icon/Link/Modal" transform="translate(520.000000, 773.000000)">
+                <path d="M10.4932,12 L1.4922,12 C0.6692,12 0.0002,11.331 0.0002,10.508 L0.0002,1.496 C0.0002,0.671 0.6712,0 1.4962,0 L3.5002,0 L3.5002,1 L1.4962,1 C1.2222,1 1.0002,1.223 1.0002,1.496 L1.0002,10.508 C1.0002,10.779 1.2212,11 1.4922,11 L10.4932,11 C10.7722,11 11.0002,10.772 11.0002,10.493 L11.0002,8.5 L12.0002,8.5 L12.0002,10.493 C12.0002,11.324 11.3242,12 10.4932,12" id="Fill-1"></path>
+                <polygon id="Fill-4" points="4.8535 7.8535 4.1465 7.1465 11.1465 0.1465 11.8535 0.8535"></polygon>
+                <polygon id="Fill-6" points="12 5.5 11 5.5 11 1 6.5 1 6.5 0 12 0"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>
