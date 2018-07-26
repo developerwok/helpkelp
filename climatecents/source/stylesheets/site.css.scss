@@ -35,51 +35,6 @@ body {
 }
 
 
-/* nav bar */
-.navbar-brand {
-	min-height: 114px;
-	
-	.kelped {
-		min-height: 57px;
-	}
-	
-	.challenge {
-		min-height: 40px;
-		margin-left: 10px;
-		margin-top: 6px;
-	}
-}
-nav {
-	.navbar-item {
-		.button {
-	    	line-height: 0;
-		}
-		
-		&:hover {
-			background: transparent !important;
-		}
-	}
-	
-	
-	button.signup {
-		background: transparent !important;
-		/* Button Plate - Outline: */
-		border: 1px solid #1B6067;
-		border-radius: 7px;		
-		
-		font-size: 12px;
-		color: #1B6067;
-		letter-spacing: 0;
-	}
-	
-	button.donate {
-		/* Button Plate - Donate: */
-		background: #A5D900;
-		border-radius: 7px;
-	}
-	
-}
-
 
 
 /* header */
@@ -172,10 +127,11 @@ nav {
 	
 	#wrap {
 		max-width: auto;
-		width: 960px;
+		max-width: 960px;
 		margin: 0 auto;
 		max-height: auto;
 		height: auto;
+		padding: 0 1rem;
 	
 	.leftdiv {
 			border: 0px solid orange;
@@ -393,14 +349,20 @@ nav {
 }
 
 
-
-
+.container.scene-transition {
+	width: 100%;
+	min-height: 300px;
+	max-height: 300px;
+    background: #227f8e;
+    background-image: linear-gradient(#227f8e 0%, #03a8a0 100%);
+}
 
 /******************
 scence 01 
 - landing
 ******************/
 section#landing {
+	
 
 	/* multiple backgrounds */
 	background-color: purple;
@@ -433,12 +395,12 @@ section#landing {
 		top, 
 		top,
 		1053px 432px,
-		bottom,
+		0 bottom,
 		450px 1086px,
-		bottom,
-		bottom,
-		bottom, 
-		bottom, 
+		-2px bottom,
+		-2px bottom, 
+		-2px bottom, 
+		-2px bottom, 
 		bottom;
 		
 	background-size: 
@@ -447,10 +409,10 @@ section#landing {
 		340px 146px,
 		100%,
 		3.72px 250.53px, /* casting line does not go to bottom */
-		100%,
-		100%,
-		100%,
-		100%,
+		103%,
+		103%,
+		103%,
+		103%,
 		cover;
 
 	.container {
@@ -515,7 +477,6 @@ section#landing {
 				text-align: center;
 				line-height: 40px;
 				font-weight: regular;
-
 			}
 
 			h3 {
@@ -537,6 +498,7 @@ section#landing {
 				letter-spacing: -0.5px;
 				text-align: center;
 				line-height: 36px;
+				font-weight: 400;
 			}
 		}
 		
@@ -589,13 +551,215 @@ section#landing {
 
 /* underwater container */
 .underwater {
-	background-image: url('/images/bkg-underwater.svg');
+	position: relative;
+	// background-image: url('/images/bkg-underwater.svg');
+    background: #03a8a0;
+    // background-image: linear-gradient(#03a8a0 0%, 004961#1A797D 100%);
+    background-image: linear-gradient(#03a8a0 0%, #004961 100%);
+    
 	background-size: cover;
+	z-index: 1;
+	
+	.surface-light {
+		position: relative;
+		
+		
+		&::before{
+			width: 100%;
+			height: 20%;
+			position: fixed;
+			content: "";
+			top: 0;
+			bottom: 0;
+			z-index: 1;
+			opacity: 0;	
+			
+			background-image :
+				url('/images/surface-light-blend.png');
+			
+			
+			background-size :
+				cover;
+				
+			background-position: 
+				100% 0;
+				
+			background-repeat: 
+				no-repeat;
+				
+			background-attachment: 
+				fixed;
+				
+		}
+		
+		.trigger-surface-light {
+			z-index: 1;
+		}
+	}
+	
+    &.light-on{
+    	
+  
+    	.surface-light {
+    		
+    		transition: background-image ease-out .5s ;
+    		background-image: linear-gradient(#1A797D 0%, #1A797D 50%, #005672 100%);
+			
+			&::before{
+				transition: opacity ease-out .5s, height ease-out .5s ;
+				height: 100%;
+    			opacity: 1;
+			}
+    	}
+    	
+	}
+	
+	&.trigger-seaotter-off {
+    	section#history {
+	  		.bg-seaotter {
+					
+					background-position: 
+						-66% 80%;
+						
+					@media screen and (max-height: 768px) {
+						background-position: 
+							-66% 150%;
+					}
+					
+					@media screen and (max-height: 1240px) {
+						background-position: 
+							-66% 150%;
+					}
+	    		}
+	    	}
+	}
+	
+	&.trigger-seaotter-on {
+    	section#history {
+	  		.bg-seaotter {
+					transition: background-position ease-out .5s;
+					
+					background-position: 
+						94% 80%;
+						
+					@media screen and (max-height: 768px) {
+						background-position: 
+							94% 80%;
+					}
+					
+					@media screen and (max-height: 1240px) {
+						background-position: 
+							94% 90%;
+					}
+	    		}
+	    	}
+	}
+	
+
+	&.trigger-days-scene {
+	
+		&.trigger-months {
+			
+		}
+		
+	}	
+	
+	&.trigger-foodchain{
+		
+		.sc-seafloor {
+			opacity: 1;
+			z-index: 1;
+		}
+	
+	}	
+	
+	&.trigger-seaurchin-on {
+		
+		&.trigger-seaotter-on {
+			.sc-urchin-split {
+				opacity: .25;
+			}
+		}
+		
+		.sc-urchin-split {
+			opacity: 1;
+			z-index: 3;
+			position: fixed;
+		}
+	}
+	
+	&.trigger-restoration-on{
+			
+		.sc-seafloor {
+			opacity: 1;
+		}
+		
+	}
+	
+	&.trigger-deepdive-on {
+		.sc-deepdive {
+			opacity: 1;
+			z-index: 3;
+		}
+		
+		.bg-history-diver {
+			opacity: 0;
+				
+			background-position: 
+				200px -250px !important;
+		}
+			
+	}	
+	
+	&.trigger-restoration-on.trigger-days {
+			
+		.sc-within-days {
+			opacity: 1;
+			z-index: 2;
+		}
+	}	
+	
+	&.trigger-restoration-on.trigger-weeks{
+		
+		.sc-within-weeks {
+			opacity: 1 !important;
+			z-index: 2 !important;
+		}
+	}	
+	
+	&.trigger-restoration-on.trigger-months{
+		
+		.sc-seafloor-pup, 
+		.sc-bluefish,
+		.sc-redfish,
+		.sc-within-days,
+		.sc-within-weeks,
+		.sc-thrive {
+			opacity: .7;
+			z-index: 3;
+		}
+		
+		.sc-thrive {
+			z-index: 2 !important;
+		}
+	}	
+	
+	&.trigger-howmuch-on {
+		.sc-restore{
+			opacity: .7;
+			z-index: 3;
+		}
+	}
+	
+	
+	
 	
 	.container {
-    width: 920px;
+    width: 100%;
+    max-width: 920px;
     margin: 0 auto;
     text-align: left;
+    padding: 1rem;
     // border: 1px solid rgba(0,0,0,.05);
 		
 		h2 { 
@@ -605,8 +769,14 @@ section#landing {
 			margin-left: 0px; 
 			text-align: left; 
 			vertical-align: middle; 
-			font-size: 4em; 
+			font-size: 3em; 
 			color: white;
+			padding: 1rem;
+			
+			@media (min-width: 790px) { 
+				font-size: 4em; 
+				padding: 0rem;
+			}
 		}
 	
 		div.callout { 
@@ -619,8 +789,8 @@ section#landing {
 			line-height: 29px;
 			
 			max-width: 560px;
-	    margin-bottom: 30px;
-	    margin-top: 30px;
+		    margin-bottom: 30px;
+		    margin-top: 30px;
 		}
 	
 		.content {
@@ -632,14 +802,18 @@ section#landing {
 			line-height: 29px;
 			
 			max-width: 560px;
-	    margin-bottom: 30px;
-	    margin-top: 30px;
+		    margin-bottom: 30px;
+		    margin-top: 30px;
 		}
 		
 		p {
 			font-family: Oxygen;
+			font-size: 14px;
 			
-			font-size: 16px;
+			@media(min-width: 790px) {
+				font-size: 16px;
+			}
+			
 			font-weight: regular;
 			
 			color: #FFFFFF;
@@ -659,12 +833,35 @@ section#landing {
 		}
 		
 		&.gap {
+			min-height: 260px;
+		}
+		
+		&.gap-100 {
+			min-height: 100px;
+		}
+		
+		&.gap-200 {
+			min-height: 200px;
+		}
+		
+		&.gap-300 {
+			min-height: 300px;
+		}
+		
+		&.gap-400 {
+			min-height: 400px;
+		}
+		
+		&.gap-400 {
 			min-height: 400px;
 		}
 		
 		
+		
 		&.right-adjusted {
-			padding-left: 400px;
+			@media (min-width: 790px) { 
+				padding-left: 400px;
+			}
 		}
 		
 		&.center-adjusted {
@@ -694,7 +891,9 @@ section#landing {
 
 	
 	.cta {	
-  	padding-left: 105px;
+		@media (min-width: 790px) { 
+  			padding-left: 105px;
+		}
   	
 		a.start { 
 			display: inline-block;
@@ -725,7 +924,8 @@ section.scene {
 	position: relative;
 	
 	.container {
-		width: 920px;
+		width: 100%;
+		max-width: 920px;
 		margin: 0 auto;
 		text-align: left;
 	}
@@ -736,6 +936,7 @@ section.scene {
 		width: 250px; 
 		margin-left: 0px; 
 		text-align: center; 
+		color: #fff;
 
 		img { 
 			display: block; 
@@ -759,7 +960,12 @@ section.scene {
 	}
 	
 	.offset {
-		margin-left: 60px;
+		padding-left: 1rem;
+		padding-right: 1rem;
+		
+		@media (min-width: 790px) { 
+			margin-left: 60px;
+		}
 	}
 	
 	.cta-details { 
@@ -780,51 +986,65 @@ section.scene {
 
 /* scene 2 -  section - */
 section#about {
+	transition: background-position ease-out 2.33s;
+	
 	background-image: 
-		url('/images/diver.png'),
+		url('/images/diver.png');
+		
+	background-size:
+		455px 454px;
+		
+	background-position:
+		-30% 0%;
+		
+	background-repeat:
+		no-repeat;
+}
+
+section#about.in-view {
+	background-size:
+		455px 454px;
+		
+	background-position:
+		70% 50%;
+		
+	background-repeat:
+		no-repeat;
+}
+
+section#about .bg-fish{
+	position: relative;
+	transition: background-position ease-out 2.03s;
+	
+	background-image: 
 		url('/images/fish.svg');
 		
 	background-size:
-		455px 454px,
 		247px 130px;
 		
 	background-position:
-		0% 50%,
-		100% 50%;
+		140% 35%;
 		
 	background-repeat:
-		no-repeat,
 		no-repeat;
 }
+
+section#about.in-view .bg-fish {
+	background-position:
+		90% 65%;
+}
+
 
 
 /* scene 3 - get started*/
 section#getstarted{ 
 	.container {
-		width: 920px;
+		width: 100%;	
+		max-width: 920px;
 		margin: 0 auto;
 		text-align: left;
 		position: relative;
 	}
-	
-	background-image: 
-		url('/images/clipboard.svg'),
-		url('/images/bluezebra.png'),
-		url('/images/lg-kelp.png');
-		
-	background-size:
-		455px 454px,
-		247px 130px,
-		1047px 1043px;
-		
-  background-position: 
-  	100% 50%, 
-  	0% 50%, 
-  	-470px 0%;
-		
-	background-repeat:
-		no-repeat,
-		no-repeat;		
 		
 	height: 940px;
 	display: flex;
@@ -832,16 +1052,84 @@ section#getstarted{
 	align-items:left;
 	position: relative;
 	
+	transition: background-position ease-out 2.03s;
+	background-image: 
+		url('/images/lg-kelp.png');
+	background-size:
+		1047px 1043px;
+	background-position: 
+		-600px 0%;
+	background-repeat: 
+		no-repeat;
+	
+	.bg-clipboard {
+		transition: background-position ease-out 4.03s;
+	
+		display: block;
+		position: relative;
+		width: 100%;
+		height: 100%;
+		
+		background-image: 
+			url('/images/clipboard.svg');
+			
+		background-size:
+			455px 454px;
+			
+		background-position: 
+			100% 0%;
+		  	
+		background-repeat: no-repeat;
+	}
+	
+	.bg-bluezebra {
+		transition: background-position ease-out 2.03s;
+		
+		display: block;
+		float: left;
+		width: 100%;
+		height: 100%;
+		position: relative;
+		
+		background-image: 
+			url('/images/bluezebra.png');
+			
+		background-size:
+			247px 130px;
+			
+		background-position: 
+			-40% 40%;
+		 
+		background-repeat: no-repeat;
+	}
+	
+	&.in-view {
+		
+		background-position: 
+			-600px 0%;
+			
+		.bg-clipboard {
+			background-position: 
+				100% 100%;
+		}
+		
+		.bg-bluezebra {
+			background-position: 
+				30% 65%;
+		}
+	}	
+	
 	h2 { 
 		position: absolute;
-    left: 200px;
-    max-width: 235px;
-    margin: 0;
-    text-align: right;
-    color: white;
-    font-size: 3.5em;
+		left: 200px;
+		max-width: 235px;
+		margin: 0;
+		text-align: right;
+		color: white;
+		font-size: 3.5em;
     
-		font-family: Montserrat-SemiBold;
+		font-family: Montserrat;
+		font-weight: 400;
 		font-size: 60px;
 		color: #FFFFFF;
 		letter-spacing: -1.25px;
@@ -852,59 +1140,70 @@ section#getstarted{
 		 
 	#steps {
 	
-    position: relative;
-    min-width: 480px;
-    width: 480px;
-    max-height: 500px;
-    height: 100%;
-    margin: 0px;
-    float: right;
+	
 		
-		/* todo - mobile */
-		float: right;
+	    position: relative;
+	    max-height: 500px;
+	    height: 100%;
+	    margin: 0px;
+	    float: right;
+    	width: 100%;
+    
+		@media (min-width: 790px) { 
+		    min-width: 480px;
+		    width: 480px;
+			float: right;
+	    	padding: 1rem;
+		}
+		
 		
 		
 		.item {
 			position: relative;
-    	padding-left: 105px;
 			
-			&:after {
-		    content: '-';
-		    display: block;
-		    width: 53px;
-		    height: 62px;
-		    line-height: 70px;
-		    background-image: url(/images/step-bubble.svg);
-		    background-position: 0 10px;
-		    background-repeat: no-repeat;
-		    position: absolute;
-		    left: 37px;
-		    top: -32px;
-		    font-family: Oxygen;
-		    font-weight: light;
-		    font-size: 19px;
-		    color: #FFFFFF;
-		    letter-spacing: -0.4px;
-		    text-align: center;
+			@media (min-width: 790px) { 
+				
+		    	padding-left: 105px;
+			
+				&:after {
+			    content: '-';
+			    display: block;
+			    width: 53px;
+			    height: 62px;
+			    line-height: 70px;
+			    background-image: url(/images/step-bubble.svg);
+			    background-position: 0 10px;
+			    background-repeat: no-repeat;
+			    position: absolute;
+			    left: 37px;
+			    top: -32px;
+			    font-family: Oxygen;
+			    font-weight: light;
+			    font-size: 19px;
+			    color: #FFFFFF;
+			    letter-spacing: -0.4px;
+			    text-align: center;
+				}
+						
+			  	&:nth-child(1) {
+						&:after {
+							content: '1';
+						}
+			  	}
+			  	
+			  	&:nth-child(2) {
+						&:after {
+							content: '2';
+						}
+			  	}
+			  	
+			  	&:nth-child(3) {
+						&:after {
+							content: '3';
+						}
+			  	}
 			}
 	
-	  	&:nth-child(1) {
-				&:after {
-					content: '1';
-				}
-	  	}
-	  	
-	  	&:nth-child(2) {
-				&:after {
-					content: '2';
-				}
-	  	}
-	  	
-	  	&:nth-child(3) {
-				&:after {
-					content: '3';
-				}
-	  	}
 		}
 		
 	
@@ -941,7 +1240,9 @@ section#getstarted{
 /* scene 4 - facts*/
 section#science {
 	height: 1440px;
-	
+	position: relative;
+
+	/*	
 	background-image: 
 		url('/images/seal.png'),
 		url('/images/shark.png'),
@@ -965,13 +1266,125 @@ section#science {
 		no-repeat,
 		no-repeat,
 		no-repeat;
+	*/
+		
+		
+	.bg-kelp-2,
+	.bg-kelp-3,
+	.bg-seal,
+	.bg-shark
+	{
+		top: 0;
+		bottom: 0;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		
+		background-repeat: no-repeat;
+		
+	}
+	
+	
+	&.in-view {
+		.bg-kelp-2 {
+			background-size:
+				982px 1457px;
+				
+			background-position:
+			    -320px 100px;
+		
+			transition: background-position ease-in .8s, background-size ease-in .8s ;
+		}
+		
+		.bg-kelp-3 {
+		}
+		
+		.bg-seal{
+			background-size:
+				455px 454px;
+				
+			background-position:
+				-60px 80%;
+				
+			transition: background-position ease-out 1s, background-size ease-out 1s ;
+		}
+		
+		.bg-shark{
+			background-size:
+				247px 130px;
+				
+			background-position:
+				80% 50%;
+				
+			transition: background-position ease-out 1s, background-size ease-out 1s ;
+		}
+		
+	}	
+		
+	.bg-kelp-2 {
+		background-image:
+			url('/images/lg-kelp2.png');
+			
+		background-size:
+			982px 1457px;
+			
+		background-position:
+		    -620px 50%;
+		    
+		opacity: .5;
+	}
+	
+	.bg-kelp-3 {
+		background-image:
+			url('/images/lg-kelp3.png');
+			
+		background-size:
+			1252px 1248px;
+			
+		background-position:
+    		840px 420px;
+    		
+		opacity: .5;
+	}
+	
+	.bg-seal{
+		background-size:
+			455px 454px;
+			
+		background-position:
+			-860px 100%;
+			
+			
+		background-image:
+			url('/images/seal.png');
+		
+	}
+	
+	.bg-shark{
+		background-size:
+			247px 130px;
+			
+		background-position:
+			140% 50%;
+			
+		background-image:
+			url('/images/shark.png');
+	}
     
 	.facts {
 		position: relative;
 		margin-bottom: 50px;
+		padding-left: 1rem;
+		padding-top: 3rem;
+		
 		
 		// @todo mobile adjust
-		padding-left: 620px !important;
+		
+		@media (min-width: 790px) { 
+			padding-top: 0rem;
+			padding-left: 620px !important;
+		}
+		
 		
 		div {
 			display: block;
@@ -984,9 +1397,15 @@ section#science {
 			color: #FFFFFF;
 			letter-spacing: 0;
 			line-height: 50px;
-			left: -44px;
 			position: relative;
-			top: 20px;
+			
+			left: -16px;
+			top: -35px;
+			
+			@media (min-width: 790px) { 
+				top: 5px;
+				left: -44px;
+			}
 		}
 		
 		.line1 {
@@ -1000,7 +1419,7 @@ section#science {
 		}
 		.line2 {
 			/* will capture: */
-			font-family: Montserrat-SemiBold;
+			font-weight: 400;
 			font-size: 18px;
 			color: #FFFFFF;
 			letter-spacing: 0;
@@ -1008,19 +1427,24 @@ section#science {
 		}
 		.line3 {
 			/* 8.5 TONS: */
-			font-family: Montserrat-SemiBold;
-			font-size: 60px;
+			font-weight: 600;
+			
+			font-size: 56px;
+			@media(min-width: 790px) {
+				font-size: 60px;
+			}
+			
 			color: #FFFFFF;
 			letter-spacing: 0;
 			line-height: 40px;
 		}
 		.line4 {
 			/* of CO2 over 10yrs: */
-			font-family: Montserrat-SemiBold;
+			font-weight: 400;
 			font-size: 24px;
 			color: #FFFFFF;
 			letter-spacing: 0;
-			line-height: 40px;	
+			line-height: 60px;	
 		}
 		
 	}
@@ -1029,7 +1453,13 @@ section#science {
 		// @todo mobile adjust
 		font-family: Montserrat;
 		font-weight: bold;
-		padding-left: 50%;
+		display: none;
+		
+		@media (min-width: 790px) { 
+			padding-left: 50%;
+			display: block;
+		}
+			
 		
 		div {
 			/* Absorbtion of CO2 an: */
@@ -1048,14 +1478,64 @@ section#science {
 		.line1 {
 			text-align: left;
 			max-width: 50%;
+			position: relative;
+			
+			&::before {
+				display: block;
+				position: absolute;
+				width: 80px;
+				height: 211px;
+				top: -231px;
+				left: 0;
+				content: "";
+				font-size: 0px;
+				z-index: -1;
+	
+				background-image :
+					url('/images/bubble-01.png');
+			}
 		}
 		
 		.line2 {
 			text-align: right;
+			position: relative;
+			margin-top: 130px;
+			
+			&::before {
+				display: block;
+				position: absolute;
+				width: 117px;
+				height: 346px;
+				top: -366px;
+				right: 0;
+				content: "";
+				font-size: 0px;
+				z-index: -1;
+				
+				background-image :
+					url('/images/bubble-02.png');
+			}
 		}
 		
 		.line3 {
 			text-align: left;
+			position: relative;
+			margin-top: 130px;
+			
+			&::before {
+				display: block;
+				position: absolute;
+				width: 235px;
+				height: 236px;
+				top: -236px;
+				left: 0;
+				content: "";
+				font-size: 0px;
+				z-index: -1;
+				
+				background-image :
+					url('/images/bubble-03.png');
+			}
 		}
 		
 		
@@ -1066,49 +1546,235 @@ section#science {
 /* scene 5 -  history */
 .history-scene-bkg {
 	height: auto;
-	height: auto;
-	padding-bottom: 300px;
+	position: relative;
+	z-index: 7;
 	
 		// url('/images/seafloor-bluefish.png'),
 		// url('/images/seafloor-redfish.png'),
 		// url('/images/seafloor-witin-weeks.png'),
 		// url('/images/seafloor-witin-days.png'),
-		
-	background-image: 
-		url('/images/deepdive.png'),
-		url('/images/seafloor-pup.png'),
-		url('/images/seafloor-bluefish.png'),
-		url('/images/seafloor-redfish.png'),
-		url('/images/seafloor-thrive.png'),
-		url('/images/seafloor-urchin-split.png'),
-		url('/images/seafloor-within-days.png'),
-		url('/images/seafloor-within-weeks.png'),
-		url('/images/seafloor.png');
-	
     background-size: 162px 268px, 340px 232px, 247px 130px, 260px 163px, 100%, 100%, 100%, 100%, 100%;
     background-position: 220px 96%, 50% 95%, 100% 90%, 200px 93%, bottom, bottom, bottom, bottom, bottom;
     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
 		background-attachment: scroll, scroll, scroll, scroll, scroll, scroll, scroll, scroll, scroll;
 
 }
+
+.sc-deepdive,
+.sc-seafloor-pup, 
+.sc-bluefish,
+.sc-redfish,
+.sc-thrive,
+.sc-urchin-split,
+.sc-within-days,
+.sc-within-weeks,
+.sc-seafloor,
+.sc-restore{
+	transition: opacity ease-out .5s;
+	
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	right: 0;
+	
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	opacity: 0;
+	z-index: 1;
+}
+
+.sc-deepdive {
+	background-image: 
+		url('/images/deepdive.png');
+	
+    background-size: 162px 268px;
+    
+    background-position: 30% 66%; 
+}	
+.sc-seafloor-pup {
+	background-image: 
+		url('/images/seafloor-pup.png');
+	
+    background-size: 340px 232px;
+    
+    background-position: 50% 50%;
+    
+	transition-delay: 600ms;
+}	
+.sc-bluefish {
+	background-image: 
+		url('/images/seafloor-bluefish.png');
+	
+    background-size: 247px 130px;
+    
+    background-position: 100% 90%;
+    
+	transition-delay: 300ms;
+}	
+.sc-redfish {
+	background-image: 
+		url('/images/seafloor-redfish.png');
+		
+    background-size: 260px 163px;
+    
+    background-position: 200px 93%;
+    
+	transition-delay: 400ms;
+}	
+.sc-thrive {
+	background-image: 
+		url('/images/seafloor-thrive.png');
+		
+    background-size: 100%;
+    
+    background-position: bottom;
+    
+	transition-delay: 1200ms;
+}	
+.sc-urchin-split {
+	background-image: 
+		url('/images/seafloor-urchin-split.png');
+		
+    background-size: 100%;
+    
+    background-position: bottom;
+    
+	transition-delay: 220ms;
+}	
+.sc-within-days {
+	background-image: 
+		url('/images/seafloor-within-days.png');
+		
+    background-size: 100%;
+    
+    background-position: bottom;
+    
+	transition-delay: 120ms;
+}	
+.sc-within-weeks {
+	background-image: 
+		url('/images/seafloor-within-weeks.png');
+		
+    background-size: 100%;
+    
+    background-position: bottom;
+    
+	transition-delay: 600ms;
+}	
+.sc-seafloor {
+	background-image: 
+		url('/images/seafloor.png');
+		
+    background-size: 100%;
+    
+    background-position: bottom;
+}	
+.sc-restore{
+	background-image: 
+		url('/images/bg-restore.png');
+		
+    background-size: 100%;
+    
+    background-position: bottom;
+}	
+
+
+
+
+
 section#history{
 	height: auto;
 	padding-bottom: 300px;
-	
-	background-image: 
-		url('/images/surface-light-blend.png'),
-		url('/images/seaotter.png'),
-		url('/images/history-diver.png'),
-		url('/images/history-bubbles.png');
-	
-    background-size: 100%, 360px, 175px, 48px;
-    background-position: 100% 0, 94% 300px, 200px 1450px, 220px 1320px;
-    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
-		background-attachment: scroll, fixed, scroll, scroll;
-
     
 	h2 { 
 		max-width: 500px; 
+	}
+
+	.bg-surface-light,
+	.bg-history-diver,
+	.bg-history-bubbles {
+		transition: background-position ease-out .7s, opacity ease-out .5s;
+		
+		top: 0;
+		bottom: 0;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		
+		background-repeat: no-repeat;
+	}
+
+	
+	.bg-surface-light {
+	}
+	
+	.bg-seaotter {
+		transition: background-position ease-out .6s;
+	    transition-delay: 500ms;
+		
+		background-image :
+			url('/images/seaotter.png');
+			
+		background-size :
+			360px;
+			
+		background-position: 
+			144% 150%;
+			
+		background-repeat: 
+			no-repeat;
+			
+		background-attachment: 
+			fixed;
+				
+	    width: 100%;
+	    height: 100%;
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    z-index: -1;			
+	}
+	
+	.bg-history-diver {
+		
+		background-image :
+			url('/images/history-diver.png');
+			
+		background-size :
+			175px;
+			
+		background-position: 
+			200px 250px;
+			
+		background-repeat: 
+			no-repeat;
+			
+		background-attachment: 
+			scroll;
+	}
+	
+	.bg-history-bubbles {
+		background-image :
+			url('/images/history-bubbles.png');
+			
+		background-size :
+			48px;
+			
+		background-position: 
+			220px 00px;
+			
+		background-repeat: 
+			no-repeat;
+			
+		background-attachment: 
+			scroll;
+	}
+	
+	span {
+		color: #fff;
 	}
 }
 
@@ -1118,12 +1784,14 @@ section#thanks {
 	padding-top: 300px;
 	padding-bottom: 300px;
 	text-align: center;	
+	background: #005672;
 	
 	.box {
 		text-align: center;
 		max-width: 920px;
 		margin: 0 auto;
 		line-height: 2rem;
+		padding: 1rem;
 	}
 	
 	h2 {
@@ -1165,12 +1833,17 @@ section#thanks {
 	
 	h5 {
 		/* Climate Cents: */
-		font-family: Montserrat-SemiBold;
-		font-size: 24px;
+		font-family: Montserrat;
+		font-weight: 600;
+		font-size: 18px;
 		color: #FFFFFF;
 		letter-spacing: -0.5px;
 		text-align: center;
 		margin: 10px auto;
+		
+		@media(min-width: 790px) {
+			font-size: 24px;
+		}
 	}
 	
 	h6 {
@@ -1196,4 +1869,48 @@ section#thanks {
 			line-height: 2rem;
 		}
 	}
+}
+
+
+.load-delay {
+  animation-delay: 333ms;
+	animation-duration: 900ms;
+}
+
+.load-long-delay {
+  animation-delay: 633ms;
+	animation-duration: 900ms;
+}
+
+
+@media (max-width: 790px) { 
+	
+	.hide-mobile {
+		display: none !important;
+	}
+	
+	section#landing .container #landing_title {
+		width: 320px;
+		
+		h1 {
+			background-size: 100%;
+			width: 316px;
+			height: 312px;
+			margin-top: 100px;
+		}
+	}
+	
+	#footer { 
+	
+		#wrap {
+			
+			.leftdiv {
+				width: 100%;
+			}
+			.rightdiv{
+				width: 100%;
+			}
+		}
+	}
+
 }
