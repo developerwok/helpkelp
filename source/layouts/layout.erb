@@ -5,40 +5,40 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
-          
+
     <!-- reset style sheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/base-min.css">
-          
+
     <!-- Use the title from a page's frontmatter if it has one -->
-    <title><%= current_page.data.title || "Middleman" %></title>
-    
+    <title><%= current_page.data.title || "Climate Cents - Help Kelp" %></title>
+
     <!-- fonts -->
     <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,800,900" rel="stylesheet">
-    
+
     <!-- animation libs -->
     <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
       integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw"
       crossorigin="anonymous">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.6.2/rellax.min.js"></script>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.6.2/rellax.min.js"></script>
 
     <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
-    
+
     <!--
     <meta name="viewport" content="user-scalable = no">
     -->
     <%= stylesheet_link_tag "site" %>
   </head>
   <body>
-    
+
     <%= partial "header" %>
-    
+
     <%= yield %>
-    
+
     <%= partial "footer" %>
-    
+
 
     <script>
       // Accepts any class name
@@ -47,8 +47,8 @@
       var rellax = new Rellax('.rellax', {
         center: true
       });
-    </script>    
-    
+    </script>
+
     <%= javascript_include_tag "site" %>
   </body>
 </html>
