@@ -9,7 +9,7 @@
             <stop stop-color="#FFCA83" offset="100%"></stop>
         </linearGradient>
     </defs>
-    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="Desktop" stroke="none" stroke-width="0" fill="none" fill-rule="evenodd">
         <g id="Home_Scene-01---Landing" fill="url(#linearGradient-1)" fill-rule="nonzero">
             <g id="SCENE-01-Home">
                 <g id="Kelp_SurfaceScene-FPO-Copy">
